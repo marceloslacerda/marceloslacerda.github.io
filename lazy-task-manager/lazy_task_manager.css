@@ -1,0 +1,13 @@
+textarea {
+    display: block;
+}
+
+#importButton, #exportButton {
+    opacity: 0;
+}
+
+.labelAsLink {
+    cursor:pointer;
+    color:blue;
+    text-decoration:underline;
+}

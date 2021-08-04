@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="lazy_task_manager.css" />
+        <title>Lazy task manager</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>The Lazy Task Manager</h1>
+        </header>
+        <main>
+            <section>
+                <button id="getTaskButton">Get something to do</button>
+                <div>
+                    <p id="oldTitle"></p>
+                    <p id="oldComments"></p>
+                    <button id="doneTaskButton" hidden=true>Task done!</button>
+                </div>
+            </section>
+            <section>
+                <form id="taskForm"
+                      autocomplete="off"
+                      onsubmit="return addTask(event)">
+                    <fieldset>
+                        <legend>New task</legend>
+                        <label>Title:
+                            <input type="text"
+                                   id="newTitle"
+                                   name="newTitle"
+                                   placeholder="Up to 30 characters..."
+                                   maxlength=30
+                                   spellcheck=true
+                                   required=true
+                                   />
+                        </label>
+                        <br/>
+                        <label>Comments:
+                            <textarea id="newComments"
+                                      name="newComments"
+                                      rows="5" cols="33"
+                                      spellcheck=true
+                                      wrap=true
+                                      placeholder="Is there something you want to say about this task?"></textarea>
+                        </label>
+                        <button id="saveButton">Save</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p id="status">...</p>
+            <label for="importButton" class="labelAsLink">Import tasks</label>
+            <input id="importButton" type="file" accept="application/json" name="importButton"/>
+            <label for="exportButton" class="labelAsLink">Export tasks</label>
+            <button id="exportButton" name="exportButton"></button>
+        </footer>
+        <script src="task_manager.js"></script>
+    </body>
+</html>
