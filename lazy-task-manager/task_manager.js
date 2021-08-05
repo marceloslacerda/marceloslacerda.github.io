@@ -153,6 +153,17 @@ function setDoneCounterWidget() {
     DONE_TOTAL_FIELD.innerText = manager.foundTasks.length
 }
 
+function tryRegisterServiceWorker() {
+    // Register service worker to control making site work offline
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/pwa-examples/a2hs/sw.js')
+        .then(() => { console.log('Service Worker Registered'); });
+    }
+}
+
+
+
 function identifyDevice() {
     let device, browser
     if(/android/i.test(navigator.userAgent)) {
@@ -300,3 +311,4 @@ const DONE_TOTAL_FIELD = document.getElementById('doneTotal')
 const STORAGE_KEY = 'tasks'
 setupUI()
 manager.restoreTasks()
+tryRegisterServiceWorker()

@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Lazy Task Manager",
+  "short_name": "L Tasks",
+  "start_url": "/lazy_task_manager.html"
+}
