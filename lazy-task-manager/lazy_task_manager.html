@@ -50,6 +50,28 @@
                     </fieldset>
                 </form>
             </section>
+	    <section>
+		    <fieldset>
+			    <legend>Completed tasks</legend>
+			    <label>Did I do a task with the word
+				    <input type="text"
+                           name="searchInput"
+                           id="searchInput"
+                           placeholder="word"/> in it?
+			    </label>
+                <div>
+                    <div id="doneTitle"></div>
+                    <div id="doneComments"></div>
+                    <button id="prevDoneButton" hidden=true>&lt;</button>
+                    <button id="nextDoneButton" hidden=true>&gt;</button>
+                </div>
+                <div id="doneCounter" hidden=true>
+                        Task
+                        <span id="doneIndex"></span> of
+                        <span id="doneTotal"></span>
+                    </div>
+	           </fieldset>
+	    </section>
         </main>
         <footer>
             <p id="status">...</p>
