@@ -275,14 +275,14 @@ class TaskManager {
         let added = 0
         for(const attr of ["done", "waiting"]) {
             for(const task of state[attr]) {
-                if(state[attr].indexOf(task) == -1) {
-                    state[attr].push(task)
+                if(this[attr].indexOf(task) == -1) {
+                    this[attr].push(task)
                     added++
                 }
             }
         }
         if(added > 0) {
-            setStatus("Some tasks were added")
+            setStatus("Some tasks were imported")
         } else {
             setStatus("No tasks needed being added")
         }
